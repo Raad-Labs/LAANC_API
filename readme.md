@@ -64,9 +64,11 @@ begin
 rescue LaancApiClient::Error => e
   puts "Error: #{e.message}"
 end
+```
 
 ## Fetch Public Key
 
+```ruby
 begin
   public_key = client.fetch_public_key(kid: "your_kid_here")
   puts public_key.inspect
